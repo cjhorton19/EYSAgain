@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Product Page</title>
+    <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
@@ -30,11 +30,7 @@
     </table>
 
 
-<<<<<<< HEAD:build/web/products.jsp
-    <p>&copy; Copyright ${currentYear} Earn Your Sleep &amp; Associates, Inc.
-=======
     <p>&copy; Copyright ${currentYear} &copy; EarnYourSleep 
->>>>>>> 1a58460a0cb2db221dec5bc2719979ec1015fe2d:build/web/index.jsp
         All rights reserved.</p>
 </body>
 </html>
