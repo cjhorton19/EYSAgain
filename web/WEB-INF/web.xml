@@ -12,6 +12,7 @@
         <url-pattern>/cart</url-pattern>
     </servlet-mapping>
     
+    
     <welcome-file-list>
         <welcome-file>listProducts.jsp</welcome-file>
     </welcome-file-list>

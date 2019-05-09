@@ -13,9 +13,9 @@ public class CartController extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         ServletContext sc = getServletContext();
-        
+
         // get current action
         String action = request.getParameter("action");
         if (action == null) {
@@ -23,11 +23,10 @@ public class CartController extends HttpServlet {
         }
 
         // perform action and set URL to appropriate page
-        String url = "/index.jsp";
+        String url = "/listProducts.jsp";
         if (action.equals("shop")) {
-            url = "/index.jsp";    // the "index" page
-        } 
-        else if (action.equals("cart")) {
+            url = "/listProducts.jsp";    // the "index" page
+        } else if (action.equals("cart")) {
             String productCode = request.getParameter("productCode");
             String quantityString = request.getParameter("quantity");
 
@@ -63,12 +62,43 @@ public class CartController extends HttpServlet {
 
             session.setAttribute("cart", cart);
             url = "/cart.jsp";
-        }
-        else if (action.equals("checkout")) {
-            url = "/checkout.jsp";
-        }
+        } else if (action.equals("userinfo")) {
+            String firstName = request.getParameter("firstName");
+            String lastName = request.getParameter("lastName");
+            String email = request.getParameter("email");
+            String address = request.getParameter("address");
+            String city = request.getParameter("city");
+            String state = request.getParameter("state");
+            String zip = request.getParameter("zip");
+            String country = request.getParameter("country");
+
+            HttpSession session = request.getSession();
+            User user = (User) session.getAttribute("user");
+            Cart cart = (Cart) session.getAttribute("cart");
+
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setEmail(email);
+            user.setAddress(address);
+            user.setCity(city);
+            user.setState(state);
+            user.setZip(zip);
+            user.setCountry(country);
+            java.util.Date today = new java.util.Date();
+
+            Invoice invoice = new Invoice();
+            invoice.setUser(user);
+            invoice.setInvoiceDate(today);
+            invoice.setLineItems(cart.getItems());
+
+            session.setAttribute("invoice", invoice);
+            session.setAttribute("user", user);
+
+            url = "/invoice.jsp";
+        } 
 
         sc.getRequestDispatcher(url)
                 .forward(request, response);
     }
+
 }

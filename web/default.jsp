@@ -11,6 +11,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     </head>
     <body>
         <h1></h1>
@@ -21,9 +23,10 @@
             <th>Description</th>
             <th>Price</th>
         </tr>
- <c:forEach var="product" items="${products}">
+ <c:forEach var="product" items="${requestScope.product}">
         <tr>
-            <td><c:out value='${product.description}' /></td>
+            <td>${product.id}</td>
+            <td>${product.description}</td>
             <td class="right">${product.priceCurrencyFormat}</td>
             <td><form action="cart" method="post">
                     <input type="hidden" name="productCode" 
@@ -35,10 +38,10 @@
         </c:forEach>
         <c:forEach var="product" items="${requestScope.productList}">
             <tr>
-                <td><c:out value="${productId}"/></td>
-                <td><c:out value="${code}"/></td>
-                <td><c:out value="${description}"/>}</td>
-                <td><c:out value="${price}"/></td>
+                <td>${productId}</td>
+                <td>${code}</td>
+                <td>${description}}</td>
+                <td>${price}</td>
             </tr>
         </c:forEach>
     </table>
