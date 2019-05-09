@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>CD list</h1>
+    <h1>Product List</h1>
     <table>
         <tr>
             <th>Description</th>

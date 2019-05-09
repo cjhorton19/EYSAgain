@@ -56,11 +56,11 @@
 
         <h1 class="my-4">Earn Your Sleep</h1>
         <div class="list-group">
-          <a href="listProducts.jsp" class="list-group-item">Men's T-Shirts
+          <a href="index.jsp" class="list-group-item">Men's T-Shirts
           <span class="sr-only">(current)</span>
           </a>
-          <a href="#" class="list-group-item">Women's T-Shirts</a>
-          <a href="#" class="list-group-item">Accessories</a>
+          <a href="women.jsp" class="list-group-item">Women's T-Shirts</a>
+          <a href="accessories.jsp" class="list-group-item">Accessories</a>
         </div>
 
       </div>
@@ -173,7 +173,7 @@
                   <a>W7</a>
                 </h4>
                 <h5>$20.00</h5>
-                <p class="card-text">Smile no sleep later</p>
+                <p class="card-text">Smile now sleep later</p>
               </div>
               <div class="card-footer">
                 <input type="submit" value="Add To Cart">

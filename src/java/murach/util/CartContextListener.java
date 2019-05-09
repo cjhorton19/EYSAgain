@@ -6,6 +6,10 @@ import java.util.*;
 import murach.business.*;
 import murach.data.*;
 
+/**
+ *
+ * @author curti
+ */
 public class CartContextListener implements ServletContextListener {
 
     @Override
@@ -13,6 +17,9 @@ public class CartContextListener implements ServletContextListener {
         
         ServletContext sc = event.getServletContext();
 
+        // initialize the customer service email address
+        String custServEmail = sc.getInitParameter("custServEmail");
+        sc.setAttribute("custServEmail", custServEmail);
         // initialize the current year
         GregorianCalendar currentDate = new GregorianCalendar();
         int currentYear = currentDate.get(Calendar.YEAR);

@@ -56,11 +56,11 @@
 
         <h1 class="my-4">Earn Your Sleep</h1>
         <div class="list-group">
-          <a href="listProducts.jsp" class="list-group-item">Men's T-Shirts
+          <a href="index.jsp" class="list-group-item">Men's T-Shirts
           <span class="sr-only">(current)</span>
           </a>
-          <a href="#" class="list-group-item">Women's T-Shirts</a>
-          <a href="#" class="list-group-item">Accessories</a>
+          <a href="women.jsp" class="list-group-item">Women's T-Shirts</a>
+          <a href="accessories.jsp" class="list-group-item">Accessories</a>
         </div>
 
       </div>

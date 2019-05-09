@@ -3,7 +3,7 @@ package murach.business;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Cart implements Serializable {
+public class Cart {
 
     private ArrayList<LineItem> items;
 
