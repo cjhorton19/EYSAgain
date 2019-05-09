@@ -12,7 +12,7 @@ import java.text.NumberFormat;
  *
  * @author curti
  */
-public class Product implements Serializable{
+public class Product {
 
     private Long productId;    
     private String code;
@@ -21,6 +21,13 @@ public class Product implements Serializable{
 
     public Product() {}
 
+    public Product(Long productId, String code, String description, double price) {
+        this.productId = productId;
+        this.code = code;
+        this.description = description;
+        this.price = price;
+    }
+    
     public Long getId() {
         return productId;
     }
