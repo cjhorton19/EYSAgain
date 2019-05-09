@@ -30,7 +30,7 @@
     </table>
 
 
-    <p>&copy; Copyright ${currentYear} Mike Murach &amp; Associates, Inc.
+    <p>&copy; Copyright ${currentYear} &copy; EarnYourSleep 
         All rights reserved.</p>
 </body>
 </html>

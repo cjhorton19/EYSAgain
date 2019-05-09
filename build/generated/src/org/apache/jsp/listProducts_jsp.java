@@ -55,7 +55,7 @@ public final class listProducts_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("  <title>Earn Your Sleep Shop</title>\n");
       out.write("\n");
       out.write("  <!-- Bootstrap core CSS -->\n");
-      out.write("  <link href=\"styles/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("  <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n");
       out.write("\n");
       out.write("  <!-- Custom styles for this template -->\n");
       out.write("  <link href=\"styles/shop-homepage.css\" rel=\"stylesheet\">\n");
@@ -148,7 +148,7 @@ public final class listProducts_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                  <a href=\"#\">Item One</a>\n");
       out.write("                </h4>\n");
       out.write("                <h5>$24.99</h5>\n");
-      out.write("                <p class=\"card-text\">Lorem ipsum dolor sit amet.</p>\n");
+      out.write("                <p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>\n");
       out.write("              </div>\n");
       out.write("              <div class=\"card-footer\">\n");
       out.write("                <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\n");
@@ -257,8 +257,9 @@ public final class listProducts_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("  </footer>\n");
       out.write("\n");
       out.write("  <!-- Bootstrap core JavaScript -->\n");
-      out.write("  <script src=\"vendor/jquery/jquery.min.js\"></script>\n");
-      out.write("  <script src=\"vendor/bootstrap/js/bootstrap.bundle.min.js\"></script>\n");
+      out.write("  <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n");
       out.write("\n");
       out.write("</body>\n");
       out.write("\n");
