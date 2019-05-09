@@ -25,10 +25,9 @@
         <c:forEach var="product" items="${requestScope.productList}">
             <tr>
                 <td>${product.getId()}</td>
-                <td>${product.getFirstName()}</td>
-                <td>${product.getLastName()}</td>
-                <td>${product.getEmail()}</td>
-                <td>${product.getPhone()}</td>
+                <td>${product.getCode()}</td>
+                <td>${product.getDescription()}</td>
+                <td>${product.getPrice()}</td>
             </tr>
         </c:forEach>
     </table>
