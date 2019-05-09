@@ -18,9 +18,8 @@
         <session-timeout>30</session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>default.jsp</welcome-file>
-=======
         <welcome-file>listProducts.jsp</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

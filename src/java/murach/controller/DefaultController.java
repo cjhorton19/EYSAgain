@@ -36,7 +36,7 @@ public class DefaultController extends HttpServlet {
             int recordsPerPage = 5;
             if(request.getParameter("page") != null)
                 page = Integer.parseInt(request.getParameter("page"));
-            ProductDAO dao = new ProductDAOImpl("com.mysql.jdbc.Driver", "jdbc:mysql://localhost", "MySQL", "root", "Password666");
+            ProductDAO dao = new ProductDAOImpl("com.mysql.jdbc.Driver", "jdbc:mysql://localhost", "mysql", "root", "adminsesame");
             List<Product> list = dao.showAllProduct((page-1)*recordsPerPage,
                     recordsPerPage);
             int noOfRecords = dao.getNoOfRecords();

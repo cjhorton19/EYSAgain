@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
+    <title>Earn Your Sleep - Cart</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
@@ -56,7 +56,7 @@
         <input type="submit" value="Checkout">
     </form>
 
-    <p>&copy; Copyright ${currentYear} Mike Murach &amp; Associates, Inc.
+    <p>&copy; Copyright ${currentYear} &copy; EarnYourSleep 
         All rights reserved.</p>
 
 </body>
