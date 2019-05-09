@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Dell
+ * @author 
  */
 public class DBConnection {
     

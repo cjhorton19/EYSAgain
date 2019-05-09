@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     
     <servlet>
-        <servlet-name>DefaultController</servlet-name>
-        <servlet-class>murach.controller.DefaultController</servlet-class>
+        <servlet-name>CartController</servlet-name>
+        <servlet-class>murach.controller.CartController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DefaultController</servlet-name>
-        <url-pattern>/DefaultController</url-pattern>
+        <servlet-name>CartController</servlet-name>
+        <url-pattern>/cart</url-pattern>
     </servlet-mapping>
-    <context-param>
-        <param-name>custServEmail</param-name>
-        <param-value>custserv@murach.com</param-value>
-    </context-param>
     
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <listener>
+        <listener-class>murach.util.CartContextListener</listener-class>
+    </listener>
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
-    <welcome-file-list>
-        <welcome-file>default.jsp</welcome-file>
-=======
-        <welcome-file>listProducts.jsp</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
 </web-app>

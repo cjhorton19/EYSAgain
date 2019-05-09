@@ -16,7 +16,7 @@ import murach.util.DBConnection;
 
 /**
  *
- * @author Dell
+ * @author curti
  */
 public class ProductDAOImpl implements ProductDAO{
     
@@ -29,7 +29,7 @@ public class ProductDAOImpl implements ProductDAO{
 
     @Override
     public List<Product> showAllProduct(int offSet, int noOfRecords) throws SQLException {
-        String sql = "SELECT SQL_CALC_FOUND_ROWS * FROM Product limit "+offSet+","+noOfRecords;
+        String sql = "SELECT SQL_CALC_FOUND_ROWS * FROM product limit "+offSet+","+noOfRecords;
         List<Product> productList = new ArrayList<Product>();
         connection.initStatement(sql);
         ResultSet rs = connection.executeQuery();

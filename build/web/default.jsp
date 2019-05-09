@@ -1,7 +1,7 @@
 <%-- 
     Document   : default
     Created on : Apr 7, 2015, 7:11:22 AM
-    Author     : Dell
+    Author     : curti
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,22 +13,32 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World! This is the default.jsp page. This page shows pagination functionality</h1>
-        <table border="1" cellpadding="5" cellspacing="5">
+        <h1></h1>
+        <table border="1" cellpadding="4" cellspacing="4">
         <tr>
             <th>ID</th>
             <th>Code</th>
             <th>Description</th>
             <th>Price</th>
         </tr>
- 
+ <c:forEach var="product" items="${products}">
+        <tr>
+            <td><c:out value='${product.description}' /></td>
+            <td class="right">${product.priceCurrencyFormat}</td>
+            <td><form action="cart" method="post">
+                    <input type="hidden" name="productCode" 
+                           value="${product.code}">
+                    <input type="submit" 
+                           value="Add To Cart">
+                </form></td>        
+        </tr>
+        </c:forEach>
         <c:forEach var="product" items="${requestScope.productList}">
             <tr>
-                <td>${product.getId()}</td>
-                <td>${product.getFirstName()}</td>
-                <td>${product.getLastName()}</td>
-                <td>${product.getEmail()}</td>
-                <td>${product.getPhone()}</td>
+                <td><c:out value="${productId}"/></td>
+                <td><c:out value="${code}"/></td>
+                <td><c:out value="${description}"/>}</td>
+                <td><c:out value="${price}"/></td>
             </tr>
         </c:forEach>
     </table>

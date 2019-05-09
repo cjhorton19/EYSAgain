@@ -12,27 +12,27 @@ import java.text.NumberFormat;
  *
  * @author curti
  */
-public class Product {
+public class Product implements Serializable{
 
-    private Long productId;    
+    private long productId;    
     private String code;
     private String description;
     private double price;
 
     public Product() {}
 
-    public Product(Long productId, String code, String description, double price) {
+    public Product(long productId, String code, String description, double price) {
         this.productId = productId;
         this.code = code;
         this.description = description;
         this.price = price;
     }
     
-    public Long getId() {
+    public long getId() {
         return productId;
     }
 
-    public void setId(Long productId) {
+    public void setId(long productId) {
         this.productId = productId;
     }
 
@@ -68,7 +68,7 @@ public class Product {
     }
 
     public String getImageURL() {
-        String imageURL = "/EarnYourSleepFinalProject/images/" + "s" + productId + ".jpg";
+        String imageURL = "/EYS582019/images/" + "w" + productId + ".jpg";
         return imageURL;
     }
 

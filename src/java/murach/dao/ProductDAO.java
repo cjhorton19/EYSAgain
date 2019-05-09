@@ -11,7 +11,7 @@ import murach.business.Product;
 
 /**
  *
- * @author Dell
+ * @author curti
  */
 public interface ProductDAO {
     
