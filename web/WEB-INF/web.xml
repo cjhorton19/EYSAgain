@@ -13,6 +13,11 @@
     </servlet-mapping>
     
     <welcome-file-list>
+<<<<<<< HEAD
+=======
+        <welcome-file>listProducts.jsp</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+>>>>>>> 3108e365c520d9054590f87b97d8a5f8861428e5
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
