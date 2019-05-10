@@ -17,10 +17,11 @@ public class ProductIO {
             String line = in.readLine();
             while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
-                Long productId = Long.parseLong(t.nextToken());
+                String productIdString = t.nextToken();
                 String productCode = t.nextToken();
                 if (code.equalsIgnoreCase(productCode)) {
                     String description = t.nextToken();
+                    Long productId = Long.parseLong(productIdString);
                     double price = Double.parseDouble(t.nextToken());
                     Product p = new Product();
                     p.setId(productId);

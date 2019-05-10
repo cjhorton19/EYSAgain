@@ -62,7 +62,10 @@ public class CartController extends HttpServlet {
 
             session.setAttribute("cart", cart);
             url = "/cart.jsp";
-        } else if (action.equals("userinfo")) {
+        } else if (action.equals("user")) {
+           url = "/user.jsp";
+        } else if (action.equals("invoice")){
+              HttpSession session = request.getSession();
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
@@ -72,7 +75,7 @@ public class CartController extends HttpServlet {
             String zip = request.getParameter("zip");
             String country = request.getParameter("country");
 
-            HttpSession session = request.getSession();
+           
             User user = (User) session.getAttribute("user");
             Cart cart = (Cart) session.getAttribute("cart");
 
@@ -95,7 +98,7 @@ public class CartController extends HttpServlet {
             session.setAttribute("user", user);
 
             url = "/invoice.jsp";
-        } 
+        }
 
         sc.getRequestDispatcher(url)
                 .forward(request, response);

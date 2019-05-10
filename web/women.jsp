@@ -39,7 +39,7 @@
 
                 <div class="col-lg-3">
 
-                    <h1 class="my-4">Earn Your Sleep - Mens</h1>
+                    <h1 class="my-4">Earn Your Sleep - Womens</h1>
                     <div class="list-group">
                         <a href="men.jsp" class="list-group-item">Men's T-Shirts
                             <span class="sr-only">(current)</span>
